@@ -1,4 +1,4 @@
-/*
+/* 01
 Reverse Array
 Ketentuan :
 - Membalikkan sebuah array
@@ -20,7 +20,7 @@ const newArr2 = reverse(arr2);
 console.log(arr, newArr);
 console.log(arr2, newArr2);
 
-/*
+/* 02
 Sum Array
 Ketentuan:
 - Menghitung total nilai yang terdapat pada sebuah array
@@ -37,7 +37,7 @@ function sumArray() {
 }
 console.log(sumArray([8, 3, 9, 2, 5]));
 
-/*
+/* 03
 Linear Search
 Ketentuan:
 - Mencari data pada array
@@ -45,41 +45,55 @@ Ketentuan:
 - Kembalikan dalam bentuk number
 - Kembalikan undefined jika tidak dikembalikan
 */
-let number = [8, 3, 9, 2, 5];
-let findNumber = [];
-for (let i = 0; i < number.length; i++) {
-  if (number[i] === 3) {
-    findNumber = number[i];
-    break;
+function searchNum(x, arr) {
+  let findNum = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === x) {
+      return findNum = arr[i]
+    }
   }
 }
-console.log(findNumber);
+console.log(searchNum(3, [8, 3, 9, 2, 5]))
 
+function searchNum(x, arr) {
+  let findNum = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === x) {
+      return findNum = arr[i]
+    }
+  }
+}
+console.log(searchNum(4, [2 ,6 ,7 ,4 ,1]))
 
+function searchNum(x, arr) {
+  let findNum = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === x) {
+      return findNum = arr[i]
+    }
+  }
+}
+console.log(searchNum(9, [2 ,6 ,7 ,5 ,1]))
 
-
-
-/*
+/* 04
 Fizz Buzz Array
 Ketentuan:
-Mencari mengubah angka fizz buzz
-Buat fungsi yang menerima parameter data array
-Kembalikan dalam bentuk boolean
+- Mencari mengubah angka fizz buzz
+- Buat fungsi yang menerima parameter data array
+- Kembalikan dalam bentuk boolean
 */
 
-function fizz(fizbus){
-  for(let i=0;i<fizbus.length ;i++){
-      if(fizbus[i] %3 === 0){
-        fizbus[i]='fizz'
-      }else if(fizbus[i]%5=== 0){
-          fizbus[i]="buzz"
-         
-      }else if(fizbus[i] % 15 === 0){
-          fizbus[i]="fizzbuzz"
-      }
-  }
-  return  fizbus
-  }
-  console.log(fizz([8 ,3 ,9 ,2 ,5,15]))
+function fizz(fizbus) {
+  for (let i = 0; i < fizbus.length; i++) {
+    if (fizbus[i] % 3 === 0) {
+      fizbus[i] = 'fizz'
+    } else if (fizbus[i] % 5 === 0) {
+      fizbus[i] = "buzz"
 
-
+    } else if (fizbus[i] % 15 === 0) {
+      fizbus[i] = "fizzbuzz"
+    }
+  }
+  return fizbus
+}
+console.log(fizz([8, 3, 9, 2, 5, 15]))
